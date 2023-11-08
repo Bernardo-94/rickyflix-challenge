@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "195527179707",
+    "project_id": "challenge-rickyflix",
+    "storage_bucket": "challenge-rickyflix.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195527179707:android:e49c7cc5d475d32a38189e",
+        "android_client_info": {
+          "package_name": "com.example.rickyflix_challenge"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARN8rHc6wvWeRH6aHXN83Bl0akfT8gcXI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

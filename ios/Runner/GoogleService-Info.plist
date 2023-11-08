@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyB7t4Fq6LGfmhChD0ntz3KZatGCkSJnue0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>195527179707</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.rickyflixChallenge</string>
+	<key>PROJECT_ID</key>
+	<string>challenge-rickyflix</string>
+	<key>STORAGE_BUCKET</key>
+	<string>challenge-rickyflix.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:195527179707:ios:51f58df3931c90ca38189e</string>
+</dict>
+</plist>
