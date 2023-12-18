@@ -63,9 +63,11 @@ class _CharactersListPage extends State<CharactersListPage> {
             child: FutureBuilder<List<CharacterModel>>(
               future: isSearchCkicked
                   ? controller.getCharactersByFilters(
-                      gender: selectedGender,
+                      /* first item of selectedTags was used here only to make gender filter work as a POC
+                      /  it should be refactored to select each filter individually on its corresponding dropdown field
+                      */
+                      gender: selectedTags[0],
                       status: selectedStatus,
-                      location: selectedLocation,
                     )
                   : controller.getCharacters(),
               builder: (context, snapshot) {

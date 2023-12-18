@@ -25,13 +25,11 @@ class CharactersListPageController {
     String? name,
     String? gender,
     String? status,
-    String? location,
   }) async {
     return service.fetchAllCharactersFiltereds(
       name: name,
       gender: gender,
       status: status,
-      location: status,
     );
   }
 
