@@ -3,6 +3,7 @@ import 'package:rickyflix_challenge/constants/constants.dart';
 import 'package:rickyflix_challenge/models/character.model.dart';
 import 'package:rickyflix_challenge/models/episode.model.dart';
 import 'package:rickyflix_challenge/models/location.model.dart';
+import 'dart:developer' as developer;
 
 class RickyFlixService {
   late GraphQLClient _client;
@@ -268,17 +269,16 @@ class RickyFlixService {
     String? name,
     String? gender,
     String? status,
-    String? location,
   }) async {
-    String filters = '';
-
     String query = '''
-      query {
+      query Characters(\$page: Int, \$name: String, \$gender: String, \$status: String) {
          characters(
-          filter: { 
-            name: "$name",
-            gender: "$gender",
-            status: "$status",}) {
+          page: \$page,
+          filter: {
+            name: \$name,
+            gender: \$gender,
+            status: \$status,
+          }) {
           results {
             id
             name
@@ -303,7 +303,10 @@ class RickyFlixService {
     ''';
 
     final QueryOptions options = QueryOptions(document: gql(query), variables: {
-      'filters': filters,
+      'page': page,
+      'name': name,
+      'gender': gender,
+      'status': status,
     });
     final QueryResult result = await _client.query(options);
 
@@ -321,7 +324,6 @@ class RickyFlixService {
     String? name,
     String? gender,
     String? status,
-    String? location,
   }) async {
     List<CharacterModel> allCharacters = [];
     int currentPage = 1;
@@ -335,7 +337,6 @@ class RickyFlixService {
           name: name,
           gender: gender,
           status: status,
-          location: location,
         );
         if (characters.isNotEmpty) {
           allCharacters.addAll(characters);
